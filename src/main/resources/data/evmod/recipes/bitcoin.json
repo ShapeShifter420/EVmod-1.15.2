@@ -1,0 +1,9 @@
+{
+  "type": "evmod:bitcoin",
+  "ingredient": {
+    "item": "minecraft: gold_ingot"
+  },
+  "result": "tutorialmod:example_item",
+  "experience": 5.0,
+  "cookingtime": 50
+}
