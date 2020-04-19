@@ -1,4 +1,9 @@
 {
   "item.evmod.controller": "Контроллер",
-  "itemGroup.evmod": "evmod"
+  "itemGroup.EVItemGroup": "EVmod",
+  "item.evmod.bitcoin": "Биткойн",
+  "item.evmod.copper": "Медный слиток",
+  "item.evmod.wolfram": "Вольфрамовый слиток",
+  "item.evmod.plastic": "Пластик",
+  "item.evmod.chip": "Микросхема"
 }

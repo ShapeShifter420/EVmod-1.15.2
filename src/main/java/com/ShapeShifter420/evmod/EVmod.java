@@ -1,7 +1,10 @@
 package com.ShapeShifter420.evmod;
 
+import com.ShapeShifter420.evmod.items.ItemInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -41,5 +44,17 @@ public class EVmod
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    }
+    public static class EVItemGroup extends ItemGroup {
+        public static final ItemGroup instance = new EVItemGroup(ItemGroup.GROUPS.length, "evmodtab");
+
+        private EVItemGroup(int index, String label) {
+            super(index, label);
+        }
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ItemInit.chip);
+        }
     }
 }
