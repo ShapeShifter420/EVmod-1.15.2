@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "evmod:items/perfo_card"
+    "layer0": "evmod:items/radio_lamp"
   }
 }

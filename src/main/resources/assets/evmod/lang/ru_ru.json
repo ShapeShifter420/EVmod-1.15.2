@@ -5,5 +5,8 @@
   "item.evmod.copper": "Медный слиток",
   "item.evmod.wolfram": "Вольфрамовый слиток",
   "item.evmod.plastic": "Пластик",
-  "item.evmod.chip": "Микросхема"
-}
+  "item.evmod.chip": "Микросхема",
+  "item.evmod.punch_card": "Перфокарта",
+  "item.evmod.radio_lamp": "Радиолампа",
+  "item.evmod.soldering_iron": "Паяльник",
+  "item.evmod.battery": "Батарея"}

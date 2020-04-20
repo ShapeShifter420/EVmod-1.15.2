@@ -32,6 +32,8 @@ public class ItemInit {
         event.getRegistry()
                 .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("controller"));
         event.getRegistry()
+                .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("radio_lamp"));
+        event.getRegistry()
                 .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("copper"));
         event.getRegistry()
             .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("plastic"));
