@@ -11,7 +11,7 @@ import net.minecraft.item.ToolItem;
 import java.util.Set;
 
 public class SolderinIronTool extends ToolItem {
-    private static final Set<Block> EFFECTIVE_ON = ImmutableSet.of(BlockList.ore_copper.getBlock());
+    private static final Set<Block> EFFECTIVE_ON = ImmutableSet.of(BlockList.chip_block.getBlock(),BlockList.power_block.getBlock());
     public SolderinIronTool(IItemTier tier, int attackDamageIn, float attackSpeedIn, Item.Properties builder) {
         super((float) attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder.addToolType(net.minecraftforge.common.ToolType.PICKAXE, tier.getHarvestLevel()));
     }

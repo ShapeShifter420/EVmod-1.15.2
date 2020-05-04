@@ -29,6 +29,7 @@ public class BlockList {
     public static Block ore_wolfram = new BlockInitOre("ore_wolfram", 1.5F);
     //public static ComputerBlock base_computer = new BlockInitComputer("base_computer", 1.5F);
     public static Block power_block = new BlockInit("power_block",1.5F);
-    public static final RegistryObject<Block> BASE_COMPUTER = BLOCKS.register("example_chest",
+    public static Block chip_block= new BlockInit("chip_block",1.5F);
+    public static final RegistryObject<Block> BASE_COMPUTER = BLOCKS.register("base_computer",
             () -> new ComputerBlock(Block.Properties.from(DEF_BLOCK.get())));
 }
