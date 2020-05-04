@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "evmod:block/ore_copper" }
+  }
+}

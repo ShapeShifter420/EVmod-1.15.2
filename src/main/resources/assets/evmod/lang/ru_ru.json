@@ -9,4 +9,5 @@
   "item.evmod.punch_card": "Перфокарта",
   "item.evmod.radio_lamp": "Радиолампа",
   "item.evmod.soldering_iron": "Паяльник",
-  "item.evmod.battery": "Батарея"}
+  "item.evmod.battery": "Батарея",
+  "block.evmod.ore_copper": "Медная руда"}

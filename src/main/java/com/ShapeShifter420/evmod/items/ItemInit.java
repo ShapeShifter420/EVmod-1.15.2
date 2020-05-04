@@ -12,50 +12,19 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 
-@Mod.EventBusSubscriber(modid = EVmod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(EVmod.MOD_ID)
 public class ItemInit {
-    public static final Item controller = null;
-    public static final Item copper = null;
-    public static final Item plastic = null;
-    public static final Item punch_card = null;
-    public static final Item bitcoin = null;
-    public static final Item wolfram = null;
-    public static final Item chip = null;
-    public static final Item battery = null;
-    public static final Item soldering_iron = null;
-    @SubscribeEvent
-    public static void registerItems(final RegistryEvent.Register<Item> event) {
-        event.getRegistry()
-                .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("controller"));
-        event.getRegistry()
-                .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("radio_lamp"));
-        event.getRegistry()
-                .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("copper"));
-        event.getRegistry()
-            .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("plastic"));
-        event.getRegistry()
-                .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("punch_card"));
-        event.getRegistry()
-                .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("bitcoin"));
-        event.getRegistry()
-                .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("wolfram"));
-        event.getRegistry()
-                .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("chip"));
-        event.getRegistry()
-                .register(new Item(new Item.Properties().group(EVmod.EVItemGroup.instance)).setRegistryName("battery"));
-        //Tool
-        event.getRegistry().register(
-                new PickaxeItem(ModItemTier.EXAMPLE, 4, 5.0f, new Item.Properties().group(EVmod.EVItemGroup.instance))
-                        .setRegistryName("soldering_iron"));
-    }
+
+
     public enum ModItemTier implements IItemTier {
         // enchantability, Supplier<Ingredient> repairMaterial
         EXAMPLE(4, 1500, 15.0F, 7.0F, 250, () -> {
-            return Ingredient.fromItems(ItemInit.soldering_iron);
+            return Ingredient.fromItems(ItemList.soldering_iron);
         });
 
         private final int harvestLevel;
