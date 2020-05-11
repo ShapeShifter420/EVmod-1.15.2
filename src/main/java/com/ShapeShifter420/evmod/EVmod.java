@@ -3,6 +3,9 @@ package com.ShapeShifter420.evmod;
 import com.ShapeShifter420.evmod.block.BlockInitComputer;
 import com.ShapeShifter420.evmod.block.BlockList;
 import com.ShapeShifter420.evmod.block.SimpleBlockItemInit;
+import com.ShapeShifter420.evmod.gui.BaseContainer;
+import com.ShapeShifter420.evmod.gui.EntityType;
+import com.ShapeShifter420.evmod.gui.ModContainerTypes;
 import com.ShapeShifter420.evmod.world.OreGeneration;
 import com.ShapeShifter420.evmod.items.ItemList;
 import net.minecraft.block.Block;
@@ -16,6 +19,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.*;
@@ -43,7 +47,9 @@ public class EVmod
         modEventBus.addListener(this::loadCompleteEvent);
         modEventBus.addListener(this::setup);
         BlockList.BLOCKS.register(modEventBus);
-        // Register ourselves for server and other game events we are interested in
+        ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
+        EntityType.TILE_ENTITY_TYPES.register(modEventBus);
+                // Register ourselves for server and other game events we are interested in
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
 

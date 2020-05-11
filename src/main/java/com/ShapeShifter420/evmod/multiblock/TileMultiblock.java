@@ -1,7 +1,9 @@
-package com.ShapeShifter420.evmod.gui;
+package com.ShapeShifter420.evmod.multiblock;
 
 import javax.annotation.Nonnull;
 
+import com.ShapeShifter420.evmod.gui.BaseContainer;
+import com.ShapeShifter420.evmod.gui.EntityType;
 import com.ShapeShifter420.evmod.objects.ComputerBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -28,18 +30,18 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-public class TileEntityBase_C extends LockableLootTileEntity {
+public class TileMultiblock<T extends MultiDetect>  extends LockableLootTileEntity {
 
     private NonNullList<ItemStack> chestContents = NonNullList.withSize(36, ItemStack.EMPTY);
     protected int numPlayersUsing;
     private IItemHandlerModifiable items = createHandler();
     private LazyOptional<IItemHandlerModifiable> itemHandler = LazyOptional.of(() -> items);
 
-    public TileEntityBase_C(TileEntityType<?> typeIn) {
+    public TileMultiblock(TileEntityType<?> typeIn) {
         super(typeIn);
     }
 
-    public TileEntityBase_C() {
+    public TileMultiblock() {
         this(EntityType.EXAMPLE_CHEST.get());
     }
 
@@ -137,14 +139,14 @@ public class TileEntityBase_C extends LockableLootTileEntity {
         BlockState blockstate = reader.getBlockState(pos);
         if (blockstate.hasTileEntity()) {
             TileEntity tileentity = reader.getTileEntity(pos);
-            if (tileentity instanceof TileEntityBase_C) {
-                return ((TileEntityBase_C) tileentity).numPlayersUsing;
+            if (tileentity instanceof com.ShapeShifter420.evmod.gui.TileEntityBase_C) {
+                return ((com.ShapeShifter420.evmod.gui.TileEntityBase_C) tileentity).numPlayersUsing;
             }
         }
         return 0;
     }
 
-    public static void swapContents(TileEntityBase_C te, TileEntityBase_C otherTe) {
+    public static void swapContents(com.ShapeShifter420.evmod.gui.TileEntityBase_C te, com.ShapeShifter420.evmod.gui.TileEntityBase_C otherTe) {
         NonNullList<ItemStack> list = te.getItems();
         te.setItems(otherTe.getItems());
         otherTe.setItems(list);

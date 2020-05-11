@@ -39,13 +39,16 @@ public class ComputerBlock extends Block{
     @Override
     public ActionResultType func_225533_a_(BlockState state, World worldIn, BlockPos pos, PlayerEntity player,
                                              Hand handIn, BlockRayTraceResult result) {
-        System.out.println(2);
-        TileEntity tile = worldIn.getTileEntity(pos);
-        if (tile instanceof TileEntityBase_C) { //tile instanceof TileEntityBase
-            NetworkHooks.openGui((ServerPlayerEntity) player, (TileEntityBase_C) tile, pos);
-            return ActionResultType.SUCCESS;
-        }
 
+        if (!worldIn.isRemote) {
+            System.out.println(2);
+            TileEntity tile = worldIn.getTileEntity(pos);
+            if (tile instanceof TileEntityBase_C) { //tile instanceof TileEntityBase;
+                System.out.println(40);
+                NetworkHooks.openGui((ServerPlayerEntity) player, (TileEntityBase_C) tile, pos);
+                return ActionResultType.SUCCESS;
+            }
+        }
         return ActionResultType.FAIL;
     }
 
