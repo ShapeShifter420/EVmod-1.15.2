@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+       "down": "evmod:blocks/mk2_all_up",
+         "up": "evmod:blocks/mk2_all_up",
+      "north": "evmod:blocks/mk2_controller_front",
+      "south": "evmod:blocks/mk2_all_side_up",
+       "west": "evmod:blocks/mk2_all_side_up",
+       "east": "evmod:blocks/mk2_all_side_up",
+   "particle": "blocks/lapis_block"
+  }
+}

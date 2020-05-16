@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+       "down": "evmod:blocks/mk3/super_computer/mk3_side",
+         "up": "evmod:blocks/mk3/super_computer/mk3_side",
+      "north": "evmod:blocks/mk3/super_computer/mk3_front_up",
+      "south": "evmod:blocks/mk3/super_computer/mk3_side",
+       "west": "evmod:blocks/mk3/super_computer/mk3_side",
+       "east": "evmod:blocks/mk3/super_computer/mk3_left_up_2",
+   "particle": "blocks/lapis_block"
+  }
+}

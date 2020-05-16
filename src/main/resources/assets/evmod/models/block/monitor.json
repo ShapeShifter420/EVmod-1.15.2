@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+       "down": "evmod:blocks/monitor_down",
+         "up": "evmod:blocks/monitor_up",
+      "north": "evmod:blocks/monitor",
+      "south": "evmod:blocks/monitor_r",
+       "west": "evmod:blocks/monitor_down",
+       "east": "evmod:blocks/monitor_down",
+   "particle": "blocks/lapis_block"
+  }
+}

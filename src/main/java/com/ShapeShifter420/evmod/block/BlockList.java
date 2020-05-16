@@ -26,6 +26,23 @@ public class BlockList {
     public static Block ore_copper = new BlockInitOre("ore_copper", 1.5F);
     public static Block ore_wolfram = new BlockInitOre("ore_wolfram", 1.5F);
     //public static ComputerBlock base_computer = new BlockInitComputer("base_computer", 1.5F);
+    public static Block monitor = new BlockInit("monitor", 1.5F);
+
+    public static Block mk2_controller = new BlockInit("mk2_controller", 1.5F);
+    public static Block mk2_recorder = new BlockInit("mk2_recorder", 1.5F);
+    public static Block mk2_up = new BlockInit("mk2_up", 1.5F);
+    public static Block mk2_down = new BlockInit("mk2_down", 1.5F);
+
+    public static Block mk3_0_0 = new BlockInit("mk3_0_0", 1.5F);
+    public static Block mk3_0_1 = new BlockInit("mk3_0_1", 1.5F);
+    public static Block mk3_0_2 = new BlockInit("mk3_0_2", 1.5F);
+    public static Block mk3_1_0 = new BlockInit("mk3_1_0", 1.5F);
+    public static Block mk3_1_1 = new BlockInit("mk3_1_1", 1.5F);
+    public static Block mk3_1_2 = new BlockInit("mk3_1_2", 1.5F);
+    public static Block mk3_2_0 = new BlockInit("mk3_2_0", 1.5F);
+    public static Block mk3_2_1 = new BlockInit("mk3_2_1", 1.5F);
+    public static Block mk3_2_2 = new BlockInit("mk3_2_2", 1.5F);
+
     public static Block power_block = new BlockInit("power_block",1.5F);
     public static Block chip_block= new BlockInit("chip_block",1.5F);
     public static final RegistryObject<Block> BASE_COMPUTER = BLOCKS.register("base_computer",

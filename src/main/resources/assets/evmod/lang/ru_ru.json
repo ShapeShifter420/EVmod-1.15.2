@@ -10,4 +10,15 @@
   "item.evmod.radio_lamp": "Радиолампа",
   "item.evmod.soldering_iron": "Паяльник",
   "item.evmod.battery": "Батарея",
-  "block.evmod.ore_copper": "Медная руда"}
+
+  "block.evmod.ore_copper": "Медная руда",
+  "block.evmod.ore_wolfram": "Вольфрамовая руда",
+  "block.evmod.monitor": "Монитор",
+  "block.evmod.mk2_controller": "MK2 Контроллер машины",
+  "block.evmod.mk2_recorder": "MK2 Контроллер физической памяти",
+  "block.evmod.mk2_up": "MK2 АЛУ",
+  "block.evmod.mk2_down": "MK2 Регистры",
+
+  "block.evmod.mk3_0_0": "MK3 01",
+  "block.evmod.mk3_0_1": "MK3 02"
+}
