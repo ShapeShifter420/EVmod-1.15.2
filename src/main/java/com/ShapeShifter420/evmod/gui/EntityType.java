@@ -12,7 +12,7 @@ public class EntityType {
     public static final  DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES = new DeferredRegister<>(
     ForgeRegistries.TILE_ENTITIES, EVmod.MOD_ID);
 
-    public static final RegistryObject<TileEntityType<TileEntityBase_C>> EXAMPLE_CHEST = EntityType.TILE_ENTITY_TYPES
+    public static final RegistryObject<TileEntityType<TileEntityComputer>> EXAMPLE_CHEST = EntityType.TILE_ENTITY_TYPES
             .register("base_computer", () -> TileEntityType.Builder
-            .create(TileEntityBase_C::new, BlockList.BASE_COMPUTER.get()).build(null));;
+            .create(TileEntityComputer::new, BlockList.BASE_COMPUTER.get()).build(null));;
 }

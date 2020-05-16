@@ -2,6 +2,7 @@ package com.ShapeShifter420.evmod.block;
 
 import com.ShapeShifter420.evmod.objects.ComputerBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.FurnaceBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;

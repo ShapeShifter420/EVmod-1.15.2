@@ -3,11 +3,13 @@ package com.ShapeShifter420.evmod.objects;
 import com.ShapeShifter420.evmod.block.BlockList;
 import com.ShapeShifter420.evmod.gui.EntityType;
 import com.ShapeShifter420.evmod.gui.TileEntityBase_C;
+import com.ShapeShifter420.evmod.gui.TileEntityComputer;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
@@ -43,22 +45,12 @@ public class ComputerBlock extends Block{
         if (!worldIn.isRemote) {
             System.out.println(2);
             TileEntity tile = worldIn.getTileEntity(pos);
-            if (tile instanceof TileEntityBase_C) { //tile instanceof TileEntityBase;
+            if (tile instanceof TileEntityComputer) { //tile instanceof TileEntityBase;
                 System.out.println(40);
-                NetworkHooks.openGui((ServerPlayerEntity) player, (TileEntityBase_C) tile, pos);
+                NetworkHooks.openGui((ServerPlayerEntity) player, (TileEntityComputer) tile, pos);
                 return ActionResultType.SUCCESS;
             }
         }
         return ActionResultType.FAIL;
-    }
-
-    @Override
-    public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (state.getBlock() != newState.getBlock()) {
-            TileEntity te = worldIn.getTileEntity(pos);
-            if (te instanceof TileEntityBase_C) {
-                InventoryHelper.dropItems(worldIn, pos, ((TileEntityBase_C) te).getItems());
-            }
-        }
     }
 }
