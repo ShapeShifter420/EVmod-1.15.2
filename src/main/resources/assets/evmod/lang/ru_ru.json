@@ -19,6 +19,11 @@
   "block.evmod.mk2_up": "MK2 АЛУ",
   "block.evmod.mk2_down": "MK2 Регистры",
 
+  "block.evmod.white_god_helmet": "Белый наголовник бога",
+  "block.evmod.white_god_chastplate": "Белый нагрудник бога",
+  "block.evmod.white_god_leggins": "Белый назадник бога",
+  "block.evmod.white_god_boots": "Белый наножник бога",
+
   "block.evmod.mk3_0_0": "MK3 01",
   "block.evmod.mk3_0_1": "MK3 02"
 }

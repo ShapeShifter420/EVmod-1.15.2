@@ -3,9 +3,11 @@ package com.ShapeShifter420.evmod.units;
 import com.ShapeShifter420.evmod.EVmod;
 import com.ShapeShifter420.evmod.block.BlockList;
 import com.ShapeShifter420.evmod.block.SimpleBlockItemInit;
+import com.ShapeShifter420.evmod.items.ArmorList;
 import com.ShapeShifter420.evmod.items.ItemInit;
 import com.ShapeShifter420.evmod.items.ItemList;
 import net.minecraft.block.Block;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
@@ -26,6 +28,9 @@ public class RegistryEvents {
     public static void registerItem(final RegistryEvent.Register<Item> event) {
         for (Item item_one : ItemList.Items){
             event.getRegistry().register(item_one);
+        }
+        for (ArmorItem armoritem_one : ArmorList.ArmorItems){
+            event.getRegistry().register(armoritem_one);
         }
 
         event.getRegistry().register(ItemList.soldering_iron = new PickaxeItem(ItemInit.ModItemTier.EXAMPLE, 4, 5.0f, new Item.Properties().group(EVmod.EVItemGroup.instance))

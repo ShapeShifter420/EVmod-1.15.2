@@ -1,7 +1,7 @@
 package com.ShapeShifter420.evmod.gui;
 
 import com.ShapeShifter420.evmod.gui.energy.EnergyStorage_C;
-import com.ShapeShifter420.evmod.objects.ComputerBlock;
+
 import com.ShapeShifter420.evmod.recieps.ComputerReciepts;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -13,8 +13,10 @@ import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.fml.network.IContainerFactory;
@@ -87,7 +89,7 @@ public class TileEntityComputer extends TileEntity implements ITickableTileEntit
             System.out.println(Integer.toString(energy));
         }
 
-        if (energy<78000) energy+= 100;
+        if (energy<78000 ) energy+= 100;
 
         ItemStack[] inputs = new ItemStack[] {handler.getStackInSlot(0), handler.getStackInSlot(1)};
 
@@ -95,7 +97,7 @@ public class TileEntityComputer extends TileEntity implements ITickableTileEntit
         {
             if(cookTime > 0)
             {
-                energy -= 20;
+                energy -= 200;
                 cookTime++;
                 if(cookTime == 100)
                 {
@@ -126,7 +128,7 @@ public class TileEntityComputer extends TileEntity implements ITickableTileEntit
                         inputs[1].shrink(1);
                         handler.setStackInSlot(0, inputs[0]);
                         handler.setStackInSlot(1, inputs[1]);
-                        energy -= 20;
+                        energy -= 200;
                     }
                 }
             }

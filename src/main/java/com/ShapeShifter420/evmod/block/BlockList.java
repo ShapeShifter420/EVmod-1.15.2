@@ -28,7 +28,7 @@ public class BlockList {
     //public static ComputerBlock base_computer = new BlockInitComputer("base_computer", 1.5F);
     public static Block monitor = new BlockInit("monitor", 1.5F);
 
-    public static Block mk2_controller = new BlockInit("mk2_controller", 1.5F);
+    //public static Block mk2_controller = new BlockInit("mk2_controller", 1.5F);
     public static Block mk2_recorder = new BlockInit("mk2_recorder", 1.5F);
     public static Block mk2_up = new BlockInit("mk2_up", 1.5F);
     public static Block mk2_down = new BlockInit("mk2_down", 1.5F);
@@ -45,6 +45,6 @@ public class BlockList {
 
     public static Block power_block = new BlockInit("power_block",1.5F);
     public static Block chip_block= new BlockInit("chip_block",1.5F);
-    public static final RegistryObject<Block> BASE_COMPUTER = BLOCKS.register("base_computer",
+    public static final RegistryObject<Block> BASE_COMPUTER = BLOCKS.register("mk2-controller",
             () -> new ComputerBlock(Block.Properties.from(new Block(Block.Properties.create(Material.IRON)))));
 }

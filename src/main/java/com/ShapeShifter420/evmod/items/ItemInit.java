@@ -1,12 +1,12 @@
 package com.ShapeShifter420.evmod.items;
 
 import com.ShapeShifter420.evmod.EVmod;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -73,6 +73,79 @@ public class ItemInit {
         public Ingredient getRepairMaterial() {
             return this.repairMaterial.getValue();
         }
+    }
+    public enum ModArmorMaterial implements IArmorMaterial {
+        TEST(EVmod.MOD_ID + ":white_god", 50, new int[]{3, 8, 6, 3}, 50, SoundEvents.field_226124_Y_, 6.9F, () -> {
+            return Ingredient.fromItems(ItemList.copper);
+        });
+
+        private static final int[] MAX_DAMAGE_ARRAY = new int[]{16, 16, 16, 16};
+        private final String name;
+        private final int maxDamageFactor;
+        private final int[] damageReductionAmountArray;
+        private final int enchantability;
+        private final SoundEvent soundEvent;
+        private final float toughness;
+        private final LazyValue<Ingredient> repairMaterial;
+
+        private ModArmorMaterial(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn,
+                                 int enchantabilityIn, SoundEvent soundEventIn, float toughnessIn,
+                                 Supplier<Ingredient> repairMaterialIn) {
+            this.name = nameIn;
+            this.maxDamageFactor = maxDamageFactorIn;
+            this.damageReductionAmountArray = damageReductionAmountIn;
+            this.enchantability = enchantabilityIn;
+            this.soundEvent = soundEventIn;
+            this.toughness = toughnessIn;
+            this.repairMaterial = new LazyValue<>(repairMaterialIn);
+        }
+
+        @Override
+        public int getDurability(EquipmentSlotType slotIn) {
+            return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
+        }
+
+        @Override
+        public int getDamageReductionAmount(EquipmentSlotType slotIn) {
+            return this.damageReductionAmountArray[slotIn.getIndex()];
+        }
+
+        @Override
+        public int getEnchantability() {
+            return this.enchantability;
+        }
+
+        @Override
+        public SoundEvent getSoundEvent() {
+            return this.soundEvent;
+        }
+
+        @Override
+        public Ingredient getRepairMaterial() {
+            return this.repairMaterial.getValue();
+        }
+
+        @Override
+        public String getName() {
+            return this.name;
+        }
+
+        @Override
+        public float getToughness() {
+            return this.toughness;
+        }
+
+//        @Override
+//        public void tick(World world, PlayerEntity player, ItemStack itemStack) {
+//            if (itemStack.getItem().equals(ArmorList.white_god_leggins))
+//                player.addPotionEffect(new EffectInstance());
+//        }
+
+//        @Override
+//        public void tick(World world, PlayerEntity player, ItemStack itemStack) {
+//            if (itemStack.getItem().equals(ArmorList.white_god_leggins))
+//                player.addPotionEffect(new EffectInstance());
+//        }
     }
 }
 
