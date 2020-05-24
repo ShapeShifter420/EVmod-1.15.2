@@ -6,6 +6,7 @@ import com.ShapeShifter420.evmod.block.SimpleBlockItemInit;
 import com.ShapeShifter420.evmod.items.ArmorList;
 import com.ShapeShifter420.evmod.items.ItemInit;
 import com.ShapeShifter420.evmod.items.ItemList;
+import com.ShapeShifter420.evmod.tools.SolderinIronTool;
 import net.minecraft.block.Block;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
@@ -33,8 +34,8 @@ public class RegistryEvents {
             event.getRegistry().register(armoritem_one);
         }
 
-        event.getRegistry().register(ItemList.soldering_iron = new PickaxeItem(ItemInit.ModItemTier.EXAMPLE, 4, 5.0f, new Item.Properties().group(EVmod.EVItemGroup.instance))
-                        .setRegistryName("soldering_iron"));
+        event.getRegistry().register(ItemList.soldering_iron);
+        event.getRegistry().register(ItemList.wiresstick);
 
         for (BlockItem block_item_one : BlockList.BlockItems){
             event.getRegistry().register(block_item_one);

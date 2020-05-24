@@ -10,6 +10,8 @@
   "item.evmod.radio_lamp": "Радиолампа",
   "item.evmod.soldering_iron": "Паяльник",
   "item.evmod.battery": "Батарея",
+  "item.evmod.wiresstick": "Палка с оголёными проводами",
+
 
   "block.evmod.ore_copper": "Медная руда",
   "block.evmod.ore_wolfram": "Вольфрамовая руда",

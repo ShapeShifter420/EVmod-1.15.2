@@ -86,7 +86,7 @@ public class TileEntityComputer extends TileEntity implements ITickableTileEntit
             System.out.println(Integer.toString(energy));
         }
 
-        if (energy<78000 ) energy+= 100;
+        if (energy<78000) energy+= 100;
 
         ItemStack[] inputs = new ItemStack[] {handler.getStackInSlot(0), handler.getStackInSlot(1)};
 

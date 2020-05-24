@@ -2,12 +2,9 @@ package com.ShapeShifter420.evmod.items;
 
 
 import com.ShapeShifter420.evmod.EVmod;
-import com.ShapeShifter420.evmod.block.BlockList;
 import com.ShapeShifter420.evmod.tools.SolderinIronTool;
-import net.minecraft.item.BlockItem;
+import com.ShapeShifter420.evmod.tools.WiresStick;
 import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraftforge.common.ToolType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,4 +22,5 @@ public class ItemList {
     public static Item battery = new SimpleItemInit("battery");
     public static Item soldering_iron= new SolderinIronTool(ItemInit.ModItemTier.EXAMPLE, 4, 5.0f, new Item.Properties().group(EVmod.EVItemGroup.instance))
             .setRegistryName("soldering_iron");
+   public static WiresStick wiresstick = new WiresStick("wiresstick");
 }
