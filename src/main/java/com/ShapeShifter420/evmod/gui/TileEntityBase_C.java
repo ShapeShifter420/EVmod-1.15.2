@@ -40,7 +40,7 @@ public class TileEntityBase_C extends LockableLootTileEntity {
     }
 
     public TileEntityBase_C() {
-        this(EntityType.EXAMPLE_CHEST.get());
+        this(EntityType.BASE_COMPUTER.get());
     }
 
     @Override

@@ -13,13 +13,10 @@ import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.energy.CapabilityEnergy;
-import net.minecraftforge.fml.network.IContainerFactory;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
@@ -38,7 +35,7 @@ public class TileEntityComputer extends TileEntity implements ITickableTileEntit
         super(tileEntityTypeIn);
     }
     public TileEntityComputer() {
-        this(EntityType.EXAMPLE_CHEST.get());
+        this(EntityType.BASE_COMPUTER.get());
     }
 
     public boolean hasCapability(Capability<?> capability, Direction facing)

@@ -2,6 +2,7 @@ package com.ShapeShifter420.evmod.block;
 
 import com.ShapeShifter420.evmod.EVmod;
 import com.ShapeShifter420.evmod.objects.ComputerBlock;
+import com.ShapeShifter420.evmod.objects.NanoChest;
 import net.minecraft.block.Block;
 
 import net.minecraft.block.Block;
@@ -43,8 +44,8 @@ public class BlockList {
     public static Block mk3_2_1 = new BlockInit("mk3_2_1", 1.5F);
     public static Block mk3_2_2 = new BlockInit("mk3_2_2", 1.5F);
 
-    public static Block power_block = new BlockInit("power_block",1.5F);
-    public static Block chip_block= new BlockInit("chip_block",1.5F);
-    public static final RegistryObject<Block> BASE_COMPUTER = BLOCKS.register("mk2-controller",
+    public static final RegistryObject<Block> BASE_COMPUTER = BLOCKS.register("mk2_controller",
             () -> new ComputerBlock(Block.Properties.from(new Block(Block.Properties.create(Material.IRON)))));
+    public static final RegistryObject<Block> NANOCHEST = BLOCKS.register("nanochest",
+            () -> new NanoChest(Block.Properties.from(new Block(Block.Properties.create(Material.IRON)))));
 }

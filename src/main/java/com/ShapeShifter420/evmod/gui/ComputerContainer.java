@@ -4,12 +4,10 @@ import com.ShapeShifter420.evmod.recieps.ComputerReciepts;
 import com.google.common.collect.Lists;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.container.FurnaceContainer;
 import net.minecraft.inventory.container.IContainerListener;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraft.inventory.container.Slot;
@@ -26,7 +24,7 @@ public class ComputerContainer extends Container
 
     public ComputerContainer(final int windowId,final PlayerInventory player,final TileEntityComputer tileentity)
     {
-        super(ModContainerTypes.EXAMPLE_CHEST.get(), windowId);
+        super(ModContainerTypes.BASE_COMPUTER.get(), windowId);
         this.tileentity = tileentity;
         IItemHandler handler = (IItemHandler) tileentity.handler;
         int startX = 8;

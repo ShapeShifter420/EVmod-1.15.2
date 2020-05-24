@@ -16,7 +16,9 @@ public class ClientSub{
 
     @SubscribeEvent
     public static void ClientSetup(FMLClientSetupEvent event) {
-        ScreenManager.registerFactory(ModContainerTypes.EXAMPLE_CHEST.get(), BaseComputerGui::new);
-        RenderTypeLookup.setRenderLayer(BlockList.BASE_COMPUTER.get(), RenderType.func_228639_c_());//ALERT
+        ScreenManager.registerFactory(ModContainerTypes.BASE_COMPUTER.get(), BaseComputerGui::new);
+        RenderTypeLookup.setRenderLayer(BlockList.BASE_COMPUTER.get(), RenderType.func_228639_c_());
+        ScreenManager.registerFactory(ModContainerTypes.NANOCHEST.get(), BaseChestGui::new);
+        RenderTypeLookup.setRenderLayer(BlockList.NANOCHEST.get(), RenderType.func_228639_c_());//ALERT
     }
 }

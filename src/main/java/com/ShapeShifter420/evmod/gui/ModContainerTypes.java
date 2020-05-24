@@ -14,6 +14,8 @@ public class ModContainerTypes {
     public static final DeferredRegister<ContainerType<?>> CONTAINER_TYPES = new DeferredRegister<>(
             ForgeRegistries.CONTAINERS, EVmod.MOD_ID);
 
-    public static final RegistryObject<ContainerType<ComputerContainer>> EXAMPLE_CHEST = CONTAINER_TYPES
+    public static final RegistryObject<ContainerType<ComputerContainer>> BASE_COMPUTER = CONTAINER_TYPES
             .register("base_computer", () -> IForgeContainerType.create(ComputerContainer::new));
+    public static final RegistryObject<ContainerType<BaseContainer>> NANOCHEST = CONTAINER_TYPES
+            .register("nanochest", () -> IForgeContainerType.create(BaseContainer::new));
 }

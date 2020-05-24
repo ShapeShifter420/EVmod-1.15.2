@@ -47,5 +47,7 @@ public class RegistryEvents {
         }
         BlockItem base_computer = new SimpleBlockItemInit(BlockList.BASE_COMPUTER.get(),"base_computer");
         BlockList.BlockItems.add(base_computer);
+        BlockItem nanochest = new SimpleBlockItemInit(BlockList.NANOCHEST.get(),"nanochest");
+        BlockList.BlockItems.add(nanochest);
     }
 }
