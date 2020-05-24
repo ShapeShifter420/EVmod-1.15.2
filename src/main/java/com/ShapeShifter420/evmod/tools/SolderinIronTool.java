@@ -23,6 +23,7 @@ public class SolderinIronTool extends ToolItem {
     public SolderinIronTool(IItemTier tier, int attackDamageIn, float attackSpeedIn, Item.Properties builder) {
         super((float) attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder.addToolType(net.minecraftforge.common.ToolType.PICKAXE, tier.getHarvestLevel()));
     }
+    @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         ItemStack item = playerIn.getHeldItem(handIn);
         Vec3d aim = playerIn.getLookVec();

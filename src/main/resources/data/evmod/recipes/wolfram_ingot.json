@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "evmod:ore_copper"
+  },
+  "result": "evmod:copper",
+  "experience": 5.0,
+  "cookingtime": 50
+}

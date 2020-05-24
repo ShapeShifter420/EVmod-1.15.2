@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AiA",
-    "iIi",
-    "AiA"
+    "AAA",
+    "AIA",
+    "iii"
   ],
   "key": {
     "i": {
       "tag": "evmod:copper"
     },
     "I": {
-      "tag": "evmod:chip"
+      "tag": "evmod:wolfram"
     },
     "A": {
-      "tag": "evmod:radio_lamp"
+      "item": "minecraft:apple"
     }
   },
   "result": {

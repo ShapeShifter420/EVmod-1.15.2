@@ -7,13 +7,13 @@
   ],
   "key": {
     "I": {
-      "item": "evmod:chip"
+      "tag": "forge:ingots/gold"
     },
     "i": {
       "tag": "forge:ingots/gold"
     }
   },
   "result": {
-    "item": "evmod:bitcoin"
+    "item": "evmod:nanochest"
   }
 }

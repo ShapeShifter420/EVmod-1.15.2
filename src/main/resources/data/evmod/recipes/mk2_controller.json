@@ -2,21 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "AiA",
-    "iIi",
+    "AIA",
     "AiA"
   ],
   "key": {
     "i": {
-      "tag": "evmod:copper"
-    },
-    "I": {
       "tag": "evmod:chip"
     },
+    "I": {
+      "tag": "evmod:controller"
+    },
     "A": {
-      "tag": "evmod:radio_lamp"
+      "tag": "evmod:plastic"
     }
   },
   "result": {
-    "item": "evmod:controller"
+    "item": "evmod:mk2_controller"
   }
 }
