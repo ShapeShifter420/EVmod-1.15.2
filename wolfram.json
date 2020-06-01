@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "evmod:ore_wolfram"
-  },
-  "result": "evmod:wolfram",
-  "experience": 5.0,
-  "cookingtime": 50
-}
