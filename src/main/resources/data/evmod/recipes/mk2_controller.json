@@ -7,16 +7,16 @@
   ],
   "key": {
     "i": {
-      "tag": "evmod:chip"
+      "item": "evmod:chip"
     },
     "I": {
-      "tag": "evmod:controller"
+      "item": "evmod:controller"
     },
     "A": {
-      "tag": "evmod:plastic"
+      "item": "evmod:plastic"
     }
   },
   "result": {
-    "item": "evmod:mk2_controller"
+    "tag": "evmod:mk2_controller"
   }
 }

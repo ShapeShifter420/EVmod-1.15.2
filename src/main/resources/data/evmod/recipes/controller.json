@@ -7,13 +7,13 @@
   ],
   "key": {
     "i": {
-      "tag": "evmod:copper"
+      "item": "evmod:copper"
     },
     "I": {
-      "tag": "evmod:chip"
+      "item": "evmod:chip"
     },
     "A": {
-      "tag": "evmod:radio_lamp"
+      "item": "evmod:radio_lamp"
     }
   },
   "result": {

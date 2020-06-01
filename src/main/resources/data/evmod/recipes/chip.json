@@ -3,17 +3,17 @@
   "pattern": [
     "iii",
     "iIi",
-    "iii"
+    "iIi"
   ],
   "key": {
     "I": {
-      "item": "evmod:bitcoin"
+      "item": "evmod:copper"
     },
     "i": {
       "tag": "forge:ingots/gold"
     }
   },
   "result": {
-    "item": "evmod:nanochest"
+    "item": "evmod:chip"
   }
 }

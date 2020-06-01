@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  P",
+    " X ",
+    "X "
+  ],
+  "key": {
+    "P": {
+      "tag": "evmod:plastic"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "evmod:soldering_iron"
+  }
+}

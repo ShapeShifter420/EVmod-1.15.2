@@ -7,16 +7,16 @@
   ],
   "key": {
     "i": {
-      "tag": "evmod:copper"
+      "item": "evmod:copper"
     },
     "I": {
-      "tag": "evmod:wolfram"
+      "item": "evmod:wolfram"
     },
     "A": {
-      "item": "minecraft:apple"
+      "item": "minecraft:air"
     }
   },
   "result": {
-    "item": "evmod:controller"
+    "item": "evmod:controller"ch
   }
 }
